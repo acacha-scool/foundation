@@ -2,6 +2,10 @@
 
 namespace League\Skeleton;
 
+/**
+ * Class ExampleTest
+ * @package League\Skeleton
+ */
 class ExampleTest extends \PHPUnit_Framework_TestCase
 {
     /**
