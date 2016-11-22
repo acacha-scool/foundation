@@ -14,17 +14,27 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Via Composer
+Via Composer in your Laravel project executes:
 
 ``` bash
-$ composer require Scool/foundation
+$ composer require scool/foundation
 ```
 
 ## Usage
 
-``` php
-$skeleton = new Scool\foundation();
-echo $skeleton->echoPhrase('Hello, League!');
+Modify your **App\User** class to:
+
+```php
+<?php
+
+namespace App;
+
+use Scool\Foundation\User as ScoolUser;
+
+class User extends ScoolUser
+{
+    
+}
 ```
 
 ## Change log
