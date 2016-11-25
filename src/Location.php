@@ -2,6 +2,7 @@
 
 namespace Scool\Foundation;
 
+use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
