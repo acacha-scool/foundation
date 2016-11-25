@@ -2,6 +2,7 @@
 
 namespace Scool\Foundation\Providers;
 
+use Acacha\Names\Providers\NamesServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -21,6 +22,7 @@ class FoundationServiceProvider extends ServiceProvider
         if (!defined('SCOOL_FOUNDATION_PATH')) {
             define('SCOOL_FOUNDATION_PATH', realpath(__DIR__.'/../../'));
         }
+        $this->app->register(NamesServiceProvider::class);
     }
 
     /**
