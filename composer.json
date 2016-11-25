@@ -18,6 +18,7 @@
     ],
     "require": {
         "php": "~5.6|~7.0",
+        "acacha/names": "^0.2.0",
         "laravel/framework": "^5.3"
     },
     "require-dev": {
