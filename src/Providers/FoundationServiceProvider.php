@@ -19,10 +19,7 @@ class FoundationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!defined('SCOOL_FOUNDATION_PATH')) {
-            define('SCOOL_FOUNDATION_PATH', realpath(__DIR__.'/../../'));
-        }
-        $this->app->register(NamesServiceProvider::class);
+        $this->loadMigrations();
     }
 
     /**
@@ -32,7 +29,10 @@ class FoundationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->loadMigrations();
+        if (!defined('SCOOL_FOUNDATION_PATH')) {
+            define('SCOOL_FOUNDATION_PATH', realpath(__DIR__.'/../../'));
+        }
+        $this->app->register(NamesServiceProvider::class);
     }
 
     /**
