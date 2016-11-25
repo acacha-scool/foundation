@@ -17,6 +17,23 @@ Via Composer in your Laravel project executes:
 $ composer require scool/foundation
 ```
 
+Add to file **config/app.php** the FoundationServiceProvider:
+
+```php
+...
+ /*
+ * Package Service Providers...
+ */
+ Scool\Foundation\Providers\FoundationServiceProvider::class,
+... 
+```
+
+And publish files with:
+
+```bash
+php artisan vendor:publish --tag=scool_foundation
+```
+
 ## Usage
 
 Modify your **App\User** class to:
