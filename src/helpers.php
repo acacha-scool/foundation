@@ -15,6 +15,20 @@ if (! function_exists('seed_locations')) {
     }
 }
 
+if (! function_exists('obtainLocationIdByCode')) {
+    /**
+     * Obtain location id by code.
+     *
+     * @param $code
+     * @param $name
+     * @return mixed
+     */
+    function obtainLocationIdByCode($code, $name)
+    {
+        return Location::where('code', $code)->first()->id;
+    }
+}
+
 if (! function_exists('first_or_create_location')) {
     /**
      * Create location if not exists and return new o already existing location.
