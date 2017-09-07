@@ -32,7 +32,6 @@ class FoundationServiceProvider extends ServiceProvider
         if (!defined('SCOOL_FOUNDATION_PATH')) {
             define('SCOOL_FOUNDATION_PATH', realpath(__DIR__.'/../../'));
         }
-        $this->app->register(NamesServiceProvider::class);
     }
 
     /**
