@@ -32,7 +32,6 @@ if (! function_exists('first_or_create_location')) {
             ]);
             return $law;
         } catch (Illuminate\Database\QueryException $e) {
-            dd($e);
             return Location::where([
                 ['code', '=', $code]
             ]);
