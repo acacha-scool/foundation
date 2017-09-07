@@ -11,6 +11,7 @@ if (! function_exists('seed_locations')) {
         first_or_create_location('20.2','Aula 20.2');
         first_or_create_location('20.3','Aula 20.3');
         first_or_create_location('20.4','Aula 20.4');
+        first_or_create_location('TODO','TODO');
         //TODO
     }
 }
@@ -20,10 +21,9 @@ if (! function_exists('obtainLocationIdByCode')) {
      * Obtain location id by code.
      *
      * @param $code
-     * @param $name
      * @return mixed
      */
-    function obtainLocationIdByCode($code, $name)
+    function obtainLocationIdByCode($code)
     {
         return Location::where('code', $code)->first()->id;
     }
